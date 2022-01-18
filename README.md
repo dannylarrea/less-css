@@ -51,4 +51,4 @@ Las siguientes reglas deberán aplicarse en el archivo "styles.less". Nunca toca
 
 15 - En la clase "div2", haciendo uso de Nestings, decir que si dentro existe un "p", su letra sea de color roja.
 
-Autores: Ricard Casals y Eric Molina
+**Autores: Ricard Casals y Eric Molina**
