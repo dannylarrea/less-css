@@ -10,6 +10,7 @@ html {
 
 body {
     margin: 0;
+    background-color: burlywood;
 }
 
 
@@ -24,3 +25,77 @@ body {
 
 
 // REGLAS PARA EL EJERCICIO AQUÍ DEBAJO
+/* 1 - Crear una variable llamada "sizeP" y asignarle el valor de "1rem". */
+@sizeP: 1rem;
+
+// 2 - A la etiqueta "p" asignarle el tamaño de letra que hemos usado en la variable creada anteriormente.
+p{
+    font-size: @sizeP;
+}
+
+// 3 - A la etiqueta "H1" asignarle el valor de la variable multiplicada por 6.
+h1{
+    font-size: @sizeP * 6;
+}
+
+// 4 - A la etiqueta "H2" asignarle el valor de la variable multiplicada por 5.
+h2{
+    font-size: @sizeP * 5;
+}
+
+// 5 - A la etiqueta "H3" asignarle el valor de la variable multiplicada por 4.
+h3{
+    font-size: @sizeP * 4;
+}
+
+// 6 - Crear una clase llamada "border" y asignarle los siguientes atributos: border-style:solid; border: @sizeP / 2; border-color: black; border-radius: @sizeP * 6;
+.border{
+    border-style:solid;
+    border: @sizeP / 2;
+    border-color: black;
+    border-radius: @sizeP * 6;
+}
+
+// 7 - Crear una clase llamada "margins" y asignarle los siguientes atributos: margin: 3%;
+.margins{
+    margin: 3%;
+}
+
+// 8 - Crear una clase llamada "flex" y asignarle los siguientes atributos: display: flex; align-items: center; justify-content: center;
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+// 10 - Crear una clase llamada "div1" y hacer que su fondo sea de color "yellowgreen".
+// 11 - En la clase "div1", haciendo uso de Mixins, hacer uso de las clases "border" y "margins" dentro de esta.
+// 12 - En la clase "div1", haciendo uso de Nestings, decir que si dentro existe un "h2", su letra sea de color gris, 
+// y si existe un "h3", que su letra sea de color blanca.
+.div1{
+    background-color: yellowgreen;
+    .border();
+    .margins();
+    h2{
+        color: gray;
+    }
+    h3{
+        color: white;
+    }
+}
+
+// 13 - Crear una clase llamada "div2" y hacer que su fondo sea de color "yellow".
+.div2{
+    background-color: yellow;
+    .border();
+    .margins();
+    .flex();
+    p{
+        color:red;
+    }
+}
+
+// 14 - En la clase "div2", haciendo uso de Mixins, hacer uso de las clases "border", "margins" y "flex" 
+// dentro de esta.
+
+
